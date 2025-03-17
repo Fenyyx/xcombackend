@@ -7,7 +7,7 @@ import userRoutes from "./routes/user.routes.js"
 import {v2 as cloudinary} from "cloudinary"
 import postRoutes from "./routes/post.routes.js"
 import notificationRoutes from "./routes/notification.route.js"
-
+import cors from cors
 
 
 dotenv.config()
@@ -26,6 +26,9 @@ cloudinary.config({
 const app = express()
 const PORT = process.env.PORT || 8000
 
+const cors = require("cors");
+
+app.use(cors({ origin: "https://xcom3.netlify.app" }));
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true})) //Para usar la versión abreviada en Postman
