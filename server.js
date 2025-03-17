@@ -28,7 +28,7 @@ const PORT = process.env.PORT || 8000
 
 const cors = require("cors");
 
-app.use(cors({ origin: "https://xcom3.netlify.app" }));
+app.use(cors());
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true})) //Para usar la versión abreviada en Postman
