@@ -24,10 +24,10 @@ cloudinary.config({
 
 
 const app = express()
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || "http://localhost:3000"
 
 const cors = require("cors");
-app.use(cors());
+app.use(cors(PORT));
 
 
   
