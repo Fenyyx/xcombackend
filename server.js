@@ -29,7 +29,7 @@ const PORT = process.env.PORT || 8000
 
 app.use(
     cors({
-      origin: 'https://xcom3.netlify.app',
+      origin: process.env.FRONTEND_URL,
       credentials: true,  // Esto permite el uso de cookies
     })
   );
