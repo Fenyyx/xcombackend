@@ -6,14 +6,14 @@ import { commentOnPost, createPost, deletePost, getAllPosts, getFollowingPosts, 
 
 const router = express.Router()
 
-router.post("/create", protectRoute, createPost)
-router.delete("/:id", protectRoute, deletePost)
-router.post("/comment/:id", protectRoute, commentOnPost)
-router.post("/like/:id", protectRoute, likeUnlikePost)
-router.get("/all", protectRoute, getAllPosts)
-router.get("/likes/:id", protectRoute, getLikedPosts)
-router.get("/following", protectRoute, getFollowingPosts)
-router.get("/user/:username", protectRoute, getUserPosts)
+router.post("/create",  createPost)
+router.delete("/:id", deletePost)
+router.post("/comment/:id", commentOnPost)
+router.post("/like/:id", likeUnlikePost)
+router.get("/all", getAllPosts)
+router.get("/likes/:id", getLikedPosts)
+router.get("/following", getFollowingPosts)
+router.get("/user/:username", getUserPosts)
 
 
 
