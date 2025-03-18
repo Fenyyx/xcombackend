@@ -27,7 +27,12 @@ const app = express()
 const PORT = process.env.PORT || "http://localhost:3000"
 
 
-app.use(cors());
+app.use(
+    cors({
+      origin: 'https://xcom3.netlify.app',
+      credentials: true,  // Esto permite el uso de cookies
+    })
+  );
 
 
   
