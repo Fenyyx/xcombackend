@@ -8,7 +8,6 @@ import {v2 as cloudinary} from "cloudinary"
 import postRoutes from "./routes/post.routes.js"
 import notificationRoutes from "./routes/notification.route.js"
 import cors from "cors"
-import generateText from "./routes/question.routes.js"
 import questionRoutes from "./routes/question.routes.js"
 
 
