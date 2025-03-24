@@ -8,6 +8,8 @@ import {v2 as cloudinary} from "cloudinary"
 import postRoutes from "./routes/post.routes.js"
 import notificationRoutes from "./routes/notification.route.js"
 import cors from "cors"
+import generateText from "./routes/question.routes.js"
+import questionRoutes from "./routes/question.routes.js"
 
 
 dotenv.config()
@@ -46,6 +48,7 @@ app.use("/api/notifications", notificationRoutes);
 app.use("/api/auth", authRoutes)
 app.use("/api/users", userRoutes)
 app.use("/api/posts", postRoutes)
+app.use("/api", questionRoutes);
 
 app.listen(PORT, () => {
     console.log(`server en el puerto ${PORT}`)
